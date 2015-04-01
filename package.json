@@ -1,0 +1,17 @@
+{
+  "name": "wonderland",
+  "description": "landscape in threejs",
+  "version": "0.1.0",
+  "devDependencies": {
+    "babel": "^4.4.6",
+    "babel-core": "^4.4.6",
+    "babel-loader": "^4.0.0",
+    "gulp": "~3.8.11",
+    "gulp-bower": "0.0.10",
+    "gulp-webpack": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/emmjab/wonderland.git"
+  }
+}
