@@ -10,6 +10,8 @@ gulp.task('webpack', function() {
 gulp.task('copy', function() {
   gulp.src('bower_components/**/*')
     .pipe(gulp.dest('dist/bower_components'));
+  gulp.src('images/*')
+    .pipe(gulp.dest('dist/images'));
   gulp.src('index.html')
     .pipe(gulp.dest('dist'));
 

@@ -1,7 +1,7 @@
 class Sphere {
   constructor(scene, size) {
     this.size = size;
-    this.scene = scene
+    this.scene = scene;
   }
   initialize() {
     // most objects displayed are a "mesh":

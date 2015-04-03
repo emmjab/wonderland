@@ -1,3 +1,4 @@
+import Landscape from './landscape.js';
 import Sphere from './sphere.js';
 
 var scene, camera, renderer;
@@ -23,29 +24,33 @@ function init()
 		
 	// create and start the renderer; choose antialias setting.
 	if (window.WebGLRenderingContext) {
-		renderer = new THREE.WebGLRenderer( {antialias:true} );
+		renderer = new THREE.WebGLRenderer( {antialias:true, alpha: true} );
 	} else {
 		renderer = new THREE.CanvasRenderer(); 
 	}
 	
 	renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
-	
 	document.body.appendChild( renderer.domElement );
 
-	
-	// create a light
-	var light = new THREE.PointLight(0xffffff);
-	light.position.set(250,0,0);
-	scene.add(light);
-	var ambientLight = new THREE.AmbientLight(0x111111);
-	scene.add(ambientLight);
-	
+	// Create the landscape
+	var landscape = new Landscape(scene, SCREEN_WIDTH, SCREEN_HEIGHT);
+	landscape.initialize();
+
 	// Create sphere
 	var sphere = new Sphere(scene, 30);
 	sphere.initialize();
 
-
 	
+	// create a light
+	var light = new THREE.PointLight(0xffffff);
+	light.position.set(50,50,50);
+	scene.add(light);
+	var ambientLight = new THREE.AmbientLight(0xaaaaaa);
+	scene.add(ambientLight);
+	
+
+
+
 }
 function animate() 
 {
