@@ -1,5 +1,6 @@
 import Landscape from './landscape.js';
 import Sphere from './sphere.js';
+import Tree from './tree.js';
 
 var scene, camera, renderer;
 
@@ -33,12 +34,16 @@ function init()
 	document.body.appendChild( renderer.domElement );
 
 	// Create the landscape
-	var landscape = new Landscape(scene, SCREEN_WIDTH, SCREEN_HEIGHT);
-	landscape.initialize();
+	//var landscape = new Landscape(scene, SCREEN_WIDTH, SCREEN_HEIGHT);
+	//landscape.initialize();
 
 	// Create sphere
-	var sphere = new Sphere(scene, 30);
-	sphere.initialize();
+	//var sphere = new Sphere(scene, 30);
+	//sphere.initialize();
+
+	// Create tree
+	var tree = new Tree(scene,50,50,30,"green",0,0,0);
+	tree.initialize();
 
 	
 	// create a light
